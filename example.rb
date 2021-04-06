@@ -1,4 +1,4 @@
-require './BHash'
+require 'bhash'
 
 #Test
 hash = BHash.new()
