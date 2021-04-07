@@ -1,10 +1,16 @@
 
 class BHash
 
-    def initialize()
+    def initialize(hmap = nil)
         @hash = Hash.new()
         @rhash = Hash.new()
+        if hmap
+          hmap.each do |r,s|
+                add(r,s)
+          end
+        end
     end
+
 
     def find(h)
         if @hash.has_key?(h)
@@ -15,19 +21,27 @@ class BHash
         return nil
     end
 
-    def add(r,s)
-        if not present?(r)
-        else
-            raise "Error! #{r} already Present"
-            return
+    def add(r, s = nil)
+        if s
+          if not present?(r)
+          else
+              raise "Error! #{r} already Present"
+              return
+            end
+            if not present?(s)
+            else
+              raise "Error! #{s} already Present"
+              return
+            end
+            @hash[r] = s
+            @rhash[s] = r
+          elsif r.is_a?(Hash)
+            r.each do |r,s|
+                  add(r,s)
+            end
+          else
+              raise "Error! Invalid Type"
         end
-        if not present?(s)
-        else
-            raise "Error! #{s} already Present"
-            return
-        end
-        @hash[r] = s
-        @rhash[s] = r
     end
 
     def delete(h)
@@ -45,7 +59,7 @@ class BHash
     end
 
     def print()
-        return @hash.to_s
+        puts @hash.to_s
     end
 
     def present?(h)
