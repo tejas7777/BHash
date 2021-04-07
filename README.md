@@ -7,7 +7,7 @@ Ruby gem to make a bi-directional hash map.
 gem install bhash
 ```
 
-##Using BHash
+## Using BHash
 
 ### Initialize
 Initializing empty BHash
