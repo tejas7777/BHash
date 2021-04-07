@@ -9,7 +9,10 @@ gem install bhash
 
 ## Using BHash
 
-###Loading the gem in your ruby script
+### Loading the gem in your ruby script
+```Ruby
+require 'bhash'
+```
 
 ### Initialize
 Initializing empty BHash
