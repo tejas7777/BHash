@@ -31,5 +31,5 @@ hash.print()
 
 #Add whole already existing hash map
 hash_new = BHash.new({"f"=>"c","h"=>"g","a"=>"d"})
-hash_new.add({"Dog"=>"Cat","Car"=>"Plane","Horse"=>"Girrafe"})
-hash_new.print()
+hash_new.add({"Dog"=>"Cat","Car"=>"Plane","Horse"=>"Girrafe",1=>2})
+hash_new.print() #{"f"=>"c", "h"=>"g", "a"=>"d", "Dog"=>"Cat", "Car"=>"Plane", "Horse"=>"Girrafe", 1=>2}
