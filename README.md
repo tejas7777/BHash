@@ -1,4 +1,4 @@
-# BHash
+# <center>BHash 💎</center>
 Ruby gem to make a bi-directional hash map. A bi-directional hash is a key, key pair hash, where the corresposnding key to a given key can be found in constant time.
 
 ## Install
